@@ -1,0 +1,232 @@
+
+:root{
+  --azul:#075985;
+  --azul-escuro:#0c4a6e;
+  --azul-claro:#e0f2fe;
+  --verde:#0f766e;
+  --verde-claro:#ccfbf1;
+  --branco:#fff;
+  --fundo:#f4fbfc;
+  --texto:#183b4d;
+  --cinza:#64748b;
+  --linha:#d8e9ee;
+}
+*{
+  box-sizing:border-box;
+  margin:0;padding:0
+}
+html{
+  scroll-behavior:smooth
+}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  background:var(--fundo);
+  line-height:1.6;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+header{
+  background:var(--branco);
+  border-bottom:1px solid var(--linha);
+  position:sticky;top:0;z-index:10;
+}
+.nav{
+  width:min(1100px,92%);
+  margin:auto;
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  font-size:20px;
+  font-weight:800;
+  color:var(--azul-escuro)
+}
+.logo span{
+  color:var(--verde)
+}
+nav{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap
+}
+nav a{
+  padding:8px 11px;
+  border-radius:8px;
+  font-size:14px;
+  color:var(--cinza);
+}
+nav a:hover,nav a.ativo{
+  background:var(--azul-claro);
+  color:var(--azul-escuro)
+}
+.menu{
+  display:none
+}
+main{
+  width:min(1100px,92%);
+  margin:auto
+}
+.hero{
+  margin:32px 0;
+  padding:45px 35px;
+  background:var(--azul-claro);
+  border-radius:18px;
+}
+.hero h1{
+  font-size:clamp(28px,5vw,46px);
+  line-height:1.1;
+  color:var(--azul-escuro);
+  max-width:700px
+}
+.hero p{margin:15px 0;
+  max-width:680px;
+  color:#466477
+}
+.botao{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:8px;
+  background:var(--azul);
+  color:white;
+  font-weight:bold;
+  font-size:14px;
+}
+.botao:hover{
+  background:var(--azul-escuro)
+}
+.secao{
+  margin:35px 0
+}
+.titulo{
+  margin-bottom:18px
+}
+.titulo h2{
+  font-size:27px;
+  color:var(--azul-escuro)
+}
+.titulo p{
+  color:var(--cinza)
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+.card{
+  background:white;
+  border:1px solid var(--linha);
+  border-radius:12px;
+  padding:20px;
+}
+.card h3{
+  color:var(--azul-escuro);
+  margin-bottom:7px
+}
+.card p{
+  font-size:14px;
+  color:var(--cinza)
+}
+.numero{
+  font-size:30px;
+  font-weight:bold;
+  color:var(--verde);
+  margin-bottom:5px;
+}
+.lista{
+  display:grid;
+  gap:10px
+}
+.lista li{
+  list-style:none;
+  background:white;
+  border:1px solid var(--linha);
+  padding:13px 16px;
+  border-radius:9px;
+}
+.destaque{
+  background:var(--verde-claro);
+  border-left:5px solid var(--verde);
+  padding:20px;
+  border-radius:8px; 
+}
+.formulario{
+  max-width:650px;
+  background:white;
+  border:1px solid var(--linha);
+  border-radius:12px;
+  padding:22px;
+}
+label{
+  display:block;
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:13px
+}
+input,textarea,select{
+  width:100%;
+  margin-top:6px;
+  padding:10px;
+  border:1px solid #bdd5df;
+  border-radius:7px;
+  font:inherit;
+  background:#fff;
+}
+textarea{
+  min-height:120px;
+  resize:vertical
+}
+footer{
+  margin-top:50px;
+  background:var(--azul-escuro);
+  color:#d9edf5;
+  padding:25px 4%;
+  text-align:center;
+  font-size:13px
+}
+.rodape-links{
+  margin-top:7px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap
+}
+.rodape-links a:hover{
+  text-decoration:underline
+}
+.tabela-wrap{
+  overflow-x:auto
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:white
+}
+th,td{
+  padding:12px;
+  text-align:left;
+  border-bottom:1px solid var(--linha);
+  font-size:14px
+}
+th{
+  background:var(--azul-claro);
+  color:var(--azul-escuro)
+}
+.badge{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:20px;
+  background:var(--verde-claro);color:var(--verde);font-size:12px;font-weight:bold}
+@media(max-width:760px){
+  .nav{align-items:flex-start;padding:12px 0;flex-wrap:wrap}
+  .menu{display:block;color:var(--azul);font-weight:bold}
+  nav{width:100%;display:grid;grid-template-columns:repeat(2,1fr)}
+  nav a{background:#f8fcfd}
+  .grid{grid-template-columns:1fr}
+  .hero{padding:30px 22px}
+}
