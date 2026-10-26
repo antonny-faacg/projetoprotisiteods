@@ -15,3 +15,5 @@ Site simples e responsivo inspirado no ODS 14 da ONU — Vida na Água.
 Somente HTML5 e CSS3. Não usa JavaScript.
 
 O formulário utiliza validação nativa do HTML. Sem backend, os dados não ficam salvos permanentemente.
+
+http://127.0.0.1:5500/index.html
